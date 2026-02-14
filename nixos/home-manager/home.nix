@@ -6,6 +6,7 @@
     ./shell/zsh/zsh.nix
     ./browser/firefox.nix
     ./git/git.nix
+    ./ssh/ssh-config.nix
     ./term-emulator/alacritty.nix
   ];
 
