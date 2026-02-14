@@ -1,0 +1,88 @@
+{ pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    # --- Recon & Enumeration ---
+    nmap # Network exploration tool and security / port scanner
+    rustscan # Ultra-fast port scanner built in Rust
+    ffuf # Fast web fuzzer written in Go
+    gobuster # Tool used to discover subdirectories and DNS subdomains
+    feroxbuster
+    subfinder # Subdomain discovery tool
+    dnsrecon # Comprehensive DNS enumeration tool
+    amass # In-depth Asset Mapping and Name Resolution (OSINT)
+    dig # DNS lookup utility
+
+    # --- Web Vulnerability ---
+    burpsuite # Graphical tool for testing Web application security
+    sqlmap # Automatic SQL injection and database takeover tool
+    nikto # Comprehensive Web server scanner
+    wpscan # WordPress security scanner
+    dirb # URL Content Scanner
+    whatweb # wappalyzer CLI
+
+    # --- Exploitation & Shells ---
+    metasploit # World's most used penetration testing framework
+    netexec # Successor to CrackMapExec for network service exploitation
+    exploitdb # Archive of public exploits (searchsploit)
+    netcat-gnu # Networking utility to read/write data across connections
+    rlwrap # Adds history/arrows to basic shells
+    powershell # Cross-platform automation (useful for AD environments)
+
+    # --- SMB & Active Directory ---
+    smbclient-ng
+    samba
+    enum4linux-ng
+    bloodhound
+    bloodhound-py
+    python313Packages.impacket
+
+    # --- Passwords & Cracking ---
+    hashcat # World's fastest advanced password recovery tool (GPU accelerated)
+    john # John the Ripper password cracker
+    hashid # Identify different types of hashes
+    thc-hydra # Very fast network login cracker
+    seclists
+    rockyou
+
+    # --- Networking & Sniffing ---
+    tshark # Terminal-based network protocol analyzer
+    bettercap # Swiss Army knife for network reconnaissance (802.11, BLE, Ethernet)
+    responder # LLMNR, NBT-NS, and MDNS poisoner
+    sniffnet # Comfortable and visual network traffic monitoring
+
+    # --- Reverse Engineering & Forensics ---
+    ghidra-bin # NSA's reverse engineering suite
+    radare2 # UNIX-like reverse engineering framework
+    binwalk # Tool for searching binary images for embedded files/code
+    stegseek # World's fastest steghide cracker
+    steghide # Classic steganography tool to hide data in files
+    exiftool # Utility for reading and editing file meta information
+
+    # --- Privacy tools ---
+    tor-browser
+
+    # --- Devel ----
+    python3
+    ty
+    go
+    gopls
+    openjdk
+    maven
+    rustup
+    nixd
+
+    # --- Personal ---
+    telegram-desktop
+    qbittorrent
+    keepassxc
+    emacs
+    vlc
+    gimp
+    supersonic
+    gajim
+    goofcord
+    ffmpeg-full
+    tmux
+  ];
+}
