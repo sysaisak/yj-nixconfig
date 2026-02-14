@@ -12,6 +12,7 @@
     zip
     unzip
     nixfmt
+    nixfmt-tree
     tealdeer
 
     # Core Unix tooling (recovery / scripts)
