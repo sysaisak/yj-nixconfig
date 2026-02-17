@@ -3,86 +3,108 @@
 {
   home.packages = with pkgs; [
     # --- Recon & Enumeration ---
-    nmap # Network exploration tool and security / port scanner
-    rustscan # Ultra-fast port scanner built in Rust
-    ffuf # Fast web fuzzer written in Go
-    gobuster # Tool used to discover subdirectories and DNS subdomains
-    feroxbuster
-    subfinder # Subdomain discovery tool
-    dnsrecon # Comprehensive DNS enumeration tool
-    amass # In-depth Asset Mapping and Name Resolution (OSINT)
-    dig # DNS lookup utility
+    nmap                # Port scanning and service discovery
+    rustscan            # Ultra-fast port scanner (modern wrapper for nmap)
+    ffuf                # Fast web fuzzer (directories, parameters, vhosts)
+    gobuster            # Directory and DNS subdomain brute-forcing
+    feroxbuster         # Recursive content discovery tool
+    subfinder           # Passive subdomain enumeration
+    dnsrecon            # Advanced DNS enumeration
+    amass               # In-depth asset mapping and OSINT framework
+    dig                 # Manual DNS query utility
 
     # --- Web Vulnerability ---
-    burpsuite # Graphical tool for testing Web application security
-    sqlmap # Automatic SQL injection and database takeover tool
-    nikto # Comprehensive Web server scanner
-    wpscan # WordPress security scanner
-    dirb # URL Content Scanner
-    whatweb # wappalyzer CLI
+    burpsuite           # Intercepting proxy for manual web testing
+    sqlmap              # Automated SQL injection exploitation
+    nikto               # Web server misconfiguration scanner
+    wpscan              # WordPress security scanner
+    dirb                # Classic web directory brute-forcer
+    whatweb             # Web technology fingerprinting tool
 
     # --- Exploitation & Shells ---
-    metasploit # World's most used penetration testing framework
-    netexec # Successor to CrackMapExec for network service exploitation
-    exploitdb # Archive of public exploits (searchsploit)
-    netcat-gnu # Networking utility to read/write data across connections
-    rlwrap # Adds history/arrows to basic shells
-    powershell # Cross-platform automation (useful for AD environments)
+    metasploit          # Exploitation and post-exploitation framework
+    netexec             # SMB/AD enumeration and abuse framework
+    exploitdb           # Local exploit database (searchsploit)
+    netcat-gnu          # Manual TCP/UDP connections and reverse shells
+    rlwrap              # Adds history and editing to basic shells
+    powershell          # Cross-platform PowerShell (useful in AD environments)
 
-    # --- SMB & Active Directory ---
-    smbclient-ng
-    samba
-    enum4linux-ng
-    bloodhound
-    bloodhound-py
-    python313Packages.impacket
+    # --- Wireless / WiFi ---
+    aircrack-ng         # WiFi auditing suite (WEP/WPA/WPA2)
+    reaverwps-t6x       # WPS PIN brute-force attacks
+    wifite2             # Automated WiFi attack tool
+    hcxdumptool         # Capture WPA handshakes and PMKIDs
+    hcxtools            # Convert captures to hashcat-compatible formats
+    bully               # Fast alternative WPS attack tool
+    mdk4                # Advanced WiFi attacks (deauth, beacon flood, etc.)
+    iw                  # Modern wireless interface configuration tool
+    wirelesstools       # Legacy wireless tools (iwconfig, iwlist)
+
+    # --- SMB, Windows & Active Directory ---
+    smbclient-ng        # Modern SMB client
+    samba               # SMB client/server suite
+    enum4linux-ng       # Automated SMB enumeration tool
+    bloodhound          # AD relationship visualization tool
+    bloodhound-py       # Python-based AD data collector
+    python313Packages.impacket # Python toolkit for Windows protocol abuse
+    evil-winrm          # Remote PowerShell shell over WinRM
+    kerbrute            # Kerberos user enumeration and brute force
+    openldap            # Command-line LDAP client
+    adidnsdump          # Dump DNS records from Active Directory
+    neo4j               # Graph database backend for BloodHound
+    certipy             # Active Directory Certificate Services exploitation
+    freerdp             # Modern and full-featured RDP client
+    ligolo-ng           # Advanced tunneling and pivoting tool
 
     # --- Passwords & Cracking ---
-    hashcat # World's fastest advanced password recovery tool (GPU accelerated)
-    john # John the Ripper password cracker
-    hashid # Identify different types of hashes
-    thc-hydra # Very fast network login cracker
-    seclists
-    rockyou
+    hashcat             # GPU-accelerated password cracking
+    john                # John the Ripper (CPU password cracking)
+    hashid              # Hash type identification tool
+    thc-hydra           # Fast network login brute-forcer
+    seclists            # Collection of wordlists and attack payloads
+    rockyou             # Classic password wordlist
 
     # --- Networking & Sniffing ---
-    tshark # Terminal-based network protocol analyzer
-    bettercap # Swiss Army knife for network reconnaissance (802.11, BLE, Ethernet)
-    responder # LLMNR, NBT-NS, and MDNS poisoner
-    sniffnet # Comfortable and visual network traffic monitoring
+    tshark              # CLI network protocol analyzer (Wireshark terminal)
+    bettercap           # MITM, sniffing, and network attack framework
+    responder           # LLMNR/NBT-NS/MDNS poisoning tool
+    sniffnet            # Visual network traffic monitoring tool
 
     # --- Reverse Engineering & Forensics ---
-    ghidra-bin # NSA's reverse engineering suite
-    radare2 # UNIX-like reverse engineering framework
-    binwalk # Tool for searching binary images for embedded files/code
-    stegseek # World's fastest steghide cracker
-    steghide # Classic steganography tool to hide data in files
-    exiftool # Utility for reading and editing file meta information
+    ghidra-bin          # Advanced reverse engineering suite (GUI)
+    radare2             # CLI reverse engineering framework
+    binwalk             # Firmware and binary extraction tool
+    stegseek            # Fast steghide password cracker
+    steghide            # Hide data inside images/audio files
+    exiftool            # Read and edit file metadata
 
-    # --- Privacy tools ---
-    tor-browser
+    # --- Privacy Tools ---
+    tor-browser         # Anonymous browsing via Tor network
 
-    # --- Devel ----
-    python3
-    ty
-    go
-    gopls
-    openjdk
-    maven
-    rustup
-    nixd
+    # --- Development ---
+    python3             # Scripting and tooling development
+    ruby                # Required for many offensive security tools
+    ty                  # Python environment manager (if used)
+    go                  # Build modern Go-based security tools
+    gopls               # Go language server
+    openjdk             # Required for BloodHound and Java-based tools
+    maven               # Java project management tool
+    rustup              # Rust toolchain manager
+    nixd                # Nix language server
 
     # --- Personal ---
-    telegram-desktop
-    qbittorrent
-    keepassxc
-    emacs
-    vlc
-    gimp
-    supersonic
-    gajim
-    goofcord
-    ffmpeg-full
-    tmux
+    telegram-desktop    # Messaging client
+    qbittorrent         # BitTorrent client
+    keepassxc           # Password manager
+    emacs               # Advanced text editor
+    vlc                 # Media player
+    gimp                # Image editor
+    supersonic          # Subsonic music client
+    gajim               # XMPP client
+    goofcord            # Alternative Discord client
+    ffmpeg-full         # Audio/video processing toolkit
+    tmux                # Terminal multiplexer
+    openvpn             # VPN client
+    xclip               # Clipboard utility for terminal
   ];
 }
