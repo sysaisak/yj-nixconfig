@@ -66,6 +66,7 @@
           ./system/desktop.nix
           ./system/services.nix
           ./system/packages.nix
+	  ./system/virtualization.nix
           ./hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {

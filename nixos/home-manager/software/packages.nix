@@ -63,12 +63,14 @@
     thc-hydra           # Fast network login brute-forcer
     seclists            # Collection of wordlists and attack payloads
     rockyou             # Classic password wordlist
+    wordlists            # Contains 2 scripts to get wordlist path. ej $(wordlists_path)/rockyou.txt
 
     # --- Networking & Sniffing ---
     tshark              # CLI network protocol analyzer (Wireshark terminal)
     bettercap           # MITM, sniffing, and network attack framework
     responder           # LLMNR/NBT-NS/MDNS poisoning tool
     sniffnet            # Visual network traffic monitoring tool
+    
 
     # --- Reverse Engineering & Forensics ---
     ghidra-bin          # Advanced reverse engineering suite (GUI)
@@ -106,5 +108,6 @@
     tmux                # Terminal multiplexer
     openvpn             # VPN client
     xclip               # Clipboard utility for terminal
+    virt-manager
   ];
 }

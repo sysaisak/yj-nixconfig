@@ -66,7 +66,7 @@
           "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
           "extensions.pocket.enabled" = false;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "layout.css.devPixelsPerPx" = 1.2;
+          "layout.css.devPixelsPerPx" = 1.1;
         };
       };
 

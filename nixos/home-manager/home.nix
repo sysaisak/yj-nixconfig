@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./software/packages.nix
+    ./software
     ./shell/zsh/zsh.nix
     ./browser/firefox.nix
     ./git/git.nix
