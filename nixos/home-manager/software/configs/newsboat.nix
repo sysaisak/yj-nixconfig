@@ -11,7 +11,7 @@
       { url = "https://thehackernews.com/rss.xml"; tags = [ "ciberseguridad" ]; }
       { url = "https://krebsonsecurity.com/feed/"; tags = [ "ciberseguridad" ]; }
       # --- Linux & Open Source ---
-      { url = "https://nixos.org/blog/feed.xml"; tags = [ "linux" "nix" ]; }
+      { url = "https://nixos.org/blog/newsletters-rss.xml"; tags = [ "linux" "nix" ]; }
       { url = "https://fosspost.org/feed"; tags = [ "linux" "fosspost" ]; }
       # --- General / Tech ---
       { url = "https://hnrss.org/newest?points=50"; tags = [ "tech" ]; }

@@ -109,5 +109,6 @@
     openvpn             # VPN client
     xclip               # Clipboard utility for terminal
     virt-manager
+    android-tools
   ];
 }
