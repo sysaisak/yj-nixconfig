@@ -27,6 +27,9 @@
       { url = "https://www.youtube.com/feeds/videos.xml?channel_id=UC94vGd_fSmYlXQ5LbBfvIOQ"; tags = [ "youtube" "ciberseguridad" ]; }
       # La Chica de Sistemas
       { url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCzrFWz6KrJy-VOz6D7EoT4w"; tags = [ "youtube" "tech" "linux" ]; }
+
+      # DarkNet diaries
+      { url = "https://podcast.darknetdiaries.com/"; tags = [ "podcast" "ciberseguridad" ]; }
       
     ];
 

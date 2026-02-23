@@ -86,7 +86,7 @@
     # --- Development ---
     python3             # Scripting and tooling development
     ruby                # Required for many offensive security tools
-    ty                  # Python environment manager (if used)
+    ty                  # Python language server
     go                  # Build modern Go-based security tools
     gopls               # Go language server
     openjdk             # Required for BloodHound and Java-based tools
@@ -101,14 +101,14 @@
     emacs               # Advanced text editor
     vlc                 # Media player
     gimp                # Image editor
-    supersonic          # Subsonic music client
     gajim               # XMPP client
-    goofcord            # Alternative Discord client
+    goofcord            # Privacy focused Discord alternative
     ffmpeg-full         # Audio/video processing toolkit
     tmux                # Terminal multiplexer
     openvpn             # VPN client
     xclip               # Clipboard utility for terminal
-    virt-manager
-    android-tools
+    virt-manager        # qemu front end
+    android-tools       # adb and some others I guess
+    strawberry          # Music player. Can play local music and music from services
   ];
 }

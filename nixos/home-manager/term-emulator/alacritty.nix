@@ -16,10 +16,10 @@
 
       font = {
         normal = {
-          family = "JetBrainsMono Nerd Font";
+          family = "JetBrainsMono NF";
           style = "Regular";
         };
-        size = 13.0;
+        size = 14.0;
       };
 
       # ---------- Cursor config ----------

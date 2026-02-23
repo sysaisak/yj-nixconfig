@@ -30,6 +30,7 @@
       enable = true;
       efiSupport = true;
       device = "nodev";
+      useOSProber = true;
     };
   };
 
