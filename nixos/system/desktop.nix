@@ -37,14 +37,4 @@ in
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # Input method
-  i18n.inputMethod = {
-    type = "fcitx5";
-    enable = true;
-    fcitx5.addons = with pkgs; [
-      fcitx5-gtk
-      kdePackages.fcitx5-chinese-addons
-    ];
-  };
 }

@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./desktop-env/xfce.nix
     ./software
     ./shell/zsh/zsh.nix
     ./browser/firefox.nix
