@@ -34,17 +34,29 @@ in
         search = {
           force = true;
           default = "google";
-          order = [ "google" "nix-packages" "ddg" ];
+          order = [
+            "google"
+            "nix-packages"
+            "ddg"
+          ];
           engines = {
             "google".metaData.alias = "@g";
             "nix-packages" = {
-              urls = [{
-                template = "https://search.nixos.org/packages";
-                params = [
-                  { name = "type"; value = "packages"; }
-                  { name = "query"; value = "{searchTerms}"; }
-                ];
-              }];
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = [ "@np" ];
             };
@@ -66,7 +78,10 @@ in
         search = {
           force = true;
           default = "ddg";
-          order = [ "ddg" "google" ];
+          order = [
+            "ddg"
+            "google"
+          ];
         };
         settings = sharedSettings;
       };

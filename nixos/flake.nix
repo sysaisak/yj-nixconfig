@@ -70,11 +70,11 @@
           ./system/packages.nix
           ./system/virtualization.nix
           ./hardware-configuration.nix
-          
+
           # Módulos de XLibre Overlay
           xlibre-overlay.nixosModules.overlay-xlibre-xserver
           xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
-          
+
           # Descomenta la siguiente línea si tienes problemas gráficos con Nvidia Prime al iniciar
           # to-me: No he testeado nvidia offload.
           # xlibre-overlay.nixosModules.nvidia-ignore-ABI

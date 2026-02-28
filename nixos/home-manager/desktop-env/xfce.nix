@@ -1,4 +1,9 @@
-{ profile, pkgs, lib, ... }:
+{
+  profile,
+  pkgs,
+  lib,
+  ...
+}:
 
 lib.mkIf (profile.desktop == "xfce") {
   # Cursor theme
@@ -15,9 +20,12 @@ lib.mkIf (profile.desktop == "xfce") {
 
     # GTK theme
     theme = {
-      name = "catppuccin-GTK-Dark"; 
+      name = "catppuccin-GTK-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {
-        tweaks = [ "frappe" "macos" ];
+        tweaks = [
+          "frappe"
+          "macos"
+        ];
       };
     };
 
@@ -25,12 +33,12 @@ lib.mkIf (profile.desktop == "xfce") {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "frappe";
-        accent = "mauve"; 
+        accent = "mauve";
       };
     };
 
-    gtk3.extraConfig.Settings = ''gtk-application-prefer-dark-theme=1'';
-    gtk4.extraConfig.Settings = ''gtk-application-prefer-dark-theme=1'';
+    gtk3.extraConfig.Settings = "gtk-application-prefer-dark-theme=1";
+    gtk4.extraConfig.Settings = "gtk-application-prefer-dark-theme=1";
   };
 
   xfconf.settings = {
@@ -38,13 +46,14 @@ lib.mkIf (profile.desktop == "xfce") {
       "Net/ThemeName" = "Catppuccin-GTK-Dark-Frappe";
       "Net/IconThemeName" = "Papirus-Dark";
       "Gtk/CursorThemeName" = "Simp1e-Adw";
-      "Gtk/CursorThemeSize" = 24;       
+      "Gtk/CursorThemeSize" = 24;
     };
 
     "xfce4-keyboard-shortcuts" = {
       "commands/custom/<Primary><Alt>t" = "alacritty";
       "commands/custom/<Super>e" = "emacs";
       "commands/custom/<Super>w" = "firefox";
+      "commands/custom/<Super>t" = "Telegram";
     };
   };
 }

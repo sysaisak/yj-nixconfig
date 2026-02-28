@@ -34,9 +34,20 @@
 
   environment.systemPackages = lib.mkIf profile.gpu.nvidia (
     with pkgs;
+    let
+      # 1. Tomamos el paquete original de Hashcat y forzamos el soporte CUDA.
+      # 2. Inyectamos el parche oficial (autoAddDriverRunpath) para evitar el problema de los "stubs".
+      hashcat-parcheado = (hashcat.override { cudaSupport = true; }).overrideAttrs (oldAttrs: {
+        nativeBuildInputs = (oldAttrs.nativeBuildInputs or [ ]) ++ [ autoAddDriverRunpath ];
+      });
+    in
     [
       cudaPackages.cudatoolkit
       cudaPackages.cuda_nvrtc
+
+      (writeShellScriptBin "hashcat" ''
+        exec nvidia-offload ${hashcat-parcheado}/bin/hashcat "$@"
+      '')
     ]
   );
 }

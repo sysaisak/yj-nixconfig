@@ -7,7 +7,7 @@
 
 let
   isXfce = profile.desktop == "xfce";
-#  isDwm = profile.desktop == "dwm";
+  #  isDwm = profile.desktop == "dwm";
 in
 {
   services.xserver = {
@@ -16,7 +16,7 @@ in
     displayManager.lightdm.enable = true;
 
     desktopManager.xfce.enable = isXfce;
-#    windowManager.dwm.enable = isDwm;
+    #    windowManager.dwm.enable = isDwm;
 
     xkb = {
       layout = "us";

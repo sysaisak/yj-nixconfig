@@ -19,7 +19,7 @@
     libvirtd = lib.mkIf profile.services.virtualization {
       enable = true;
       qemu = {
-	package = pkgs.qemu_kvm;
+        package = pkgs.qemu_kvm;
         swtpm.enable = true;
       };
     };

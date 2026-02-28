@@ -4,12 +4,12 @@
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
-    
+
     fcitx5 = {
       addons = with pkgs; [
         fcitx5-gtk
-	kdePackages.fcitx5-qt
-	kdePackages.fcitx5-chinese-addons
+        kdePackages.fcitx5-qt
+        kdePackages.fcitx5-chinese-addons
         catppuccin-fcitx5
       ];
 
@@ -26,7 +26,7 @@
 
         globalOptions = {
           "Hotkey/TriggerKeys" = {
-            "0" = "Super+space"; 
+            "0" = "Super+space";
           };
         };
 
@@ -35,9 +35,9 @@
             Theme = "catppuccin-frappe-mauve";
             DarkTheme = "catppuccin-frappe-mauve";
 
-	    Font = "Noto Sans CJK SC 14";
-	    MenuFont = "Noto Sans CJK SC 14";
-	    TrayFont = "Noto Sans 12";
+            Font = "Noto Sans CJK SC 14";
+            MenuFont = "Noto Sans CJK SC 14";
+            TrayFont = "Noto Sans 12";
           };
         };
       };

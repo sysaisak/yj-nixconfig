@@ -12,7 +12,7 @@
     zip
     unzip
     nixfmt
-    nixfmt-tree
+    nixfmt-tree        # Provides an instace of treefmt, preconfigured to use nixfmt.
     tealdeer
 
     # Core Unix tooling (recovery / scripts)
@@ -66,11 +66,17 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = [ "Noto Serif CJK SC" "Noto Serif" ];
-        sansSerif = [ "Noto Sans CJK SC" "Noto Sans" ];
+        serif = [
+          "Noto Serif CJK SC"
+          "Noto Serif"
+        ];
+        sansSerif = [
+          "Noto Sans CJK SC"
+          "Noto Sans"
+        ];
         monospace = [ "Sarasa Mono SC" ];
       };
-      
+
       # Better render (?)
       antialias = true;
       hinting.enable = true;
