@@ -1,16 +1,23 @@
-{ pkgs, ... }:
+{ profile, pkgs, lib, ... }:
 
-{
+lib.mkIf (profile.desktop == "xfce") {
+  # Cursor theme
+  home.pointerCursor = {
+    name = "Simp1e-Adw";
+    package = pkgs.simp1e-cursors;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   gtk = {
     enable = true;
 
-    # 1. Tema de la interfaz (GTK)
+    # GTK theme
     theme = {
-      name = "catppuccin-frappe-mauve-standard"; 
-      package = pkgs.catppuccin-gtk.override {
-        variant = "frappe";
-        accents = [ "mauve" ];
-        size = "standard";
+      name = "catppuccin-GTK-Dark"; 
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        tweaks = [ "frappe" "macos" ];
       };
     };
 
@@ -22,28 +29,22 @@
       };
     };
 
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
+    gtk3.extraConfig.Settings = ''gtk-application-prefer-dark-theme=1'';
+    gtk4.extraConfig.Settings = ''gtk-application-prefer-dark-theme=1'';
   };
 
-  # 3. Aplicar el tema a XFCE mediante xfconf
   xfconf.settings = {
-    # xfwm4 = {
-    #   "general/theme" = "catppuccin-frappe-mauve-standard";
-    #   "general/use_compositing" = true;
-    # };
     xsettings = {
-      "Net/ThemeName" = "catppuccin-frappe-mauve-standard";
+      "Net/ThemeName" = "Catppuccin-GTK-Dark-Frappe";
       "Net/IconThemeName" = "Papirus-Dark";
+      "Gtk/CursorThemeName" = "Simp1e-Adw";
+      "Gtk/CursorThemeSize" = 24;       
+    };
+
+    "xfce4-keyboard-shortcuts" = {
+      "commands/custom/<Primary><Alt>t" = "alacritty";
+      "commands/custom/<Super>e" = "emacs";
+      "commands/custom/<Super>w" = "firefox";
     };
   };
 }

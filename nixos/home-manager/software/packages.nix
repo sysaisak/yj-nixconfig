@@ -52,7 +52,7 @@
     openldap            # Command-line LDAP client
     adidnsdump          # Dump DNS records from Active Directory
     neo4j               # Graph database backend for BloodHound
-    certipy             # Active Directory Certificate Services exploitation
+    #certipy             # Active Directory Certificate Services exploitation
     freerdp             # Modern and full-featured RDP client
     ligolo-ng           # Advanced tunneling and pivoting tool
 

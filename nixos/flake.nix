@@ -2,10 +2,11 @@
   description = "ai";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -15,6 +16,7 @@
       self,
       nixpkgs,
       home-manager,
+      xlibre-overlay,
       ...
     }:
     let
@@ -66,8 +68,16 @@
           ./system/desktop.nix
           ./system/services.nix
           ./system/packages.nix
-	  ./system/virtualization.nix
+          ./system/virtualization.nix
           ./hardware-configuration.nix
+          
+          # Módulos de XLibre Overlay
+          xlibre-overlay.nixosModules.overlay-xlibre-xserver
+          xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
+          
+          # Descomenta la siguiente línea si tienes problemas gráficos con Nvidia Prime al iniciar
+          # xlibre-overlay.nixosModules.nvidia-ignore-ABI
+
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

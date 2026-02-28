@@ -84,12 +84,7 @@
         zinit wait"0a" lucid light-mode for \
             atload"_zsh_autosuggest_start" \
                 zsh-users/zsh-autosuggestions \
-            atinit"zicompinit; zicdreplay" \
-                zdharma-continuum/fast-syntax-highlighting
-
-        # Syntax highlighting styles
-        typeset -gA FAST_HIGHLIGHT_STYLES
-        FAST_HIGHLIGHT_STYLES[path]='none'
+            zsh-users/zsh-syntax-highlighting
       '')
 
       ''
