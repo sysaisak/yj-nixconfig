@@ -64,7 +64,7 @@
   # Set default shell based on Flake profile
   users.users.${profile.user} = {
     isNormalUser = true;
-    # Dynamic shell selection
+    # Dynamic shell selection. All in flake.nix
     shell = if profile.defaultShell == "zsh" then pkgs.zsh else pkgs.bash;
     extraGroups = [
       "wheel" # Sudo

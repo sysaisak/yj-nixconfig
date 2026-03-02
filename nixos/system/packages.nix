@@ -24,6 +24,8 @@
     file
     which
     moreutils
+    man-pages
+    man-pages-posix
 
     # Networking (system-level)
     iproute2

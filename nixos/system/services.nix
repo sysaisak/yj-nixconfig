@@ -55,4 +55,25 @@
     enable = true;
     package = pkgs.tshark;
   };
+
+  services.syncthing = {
+    user = profile.user;
+    enable = profile.services.syncthing;
+    dataDir = "/home/${profile.user}/org";
+    configDir = "/home/${profile.user}/.config/syncthing";
+
+    openDefaultPorts = true;
+
+    settings = {
+      devices = {
+	"realme" = { id = "QMQHIZ7-K47KW37-OGCODVK-YX3QF34-K2UASIM-R27AQ2I-4RCOA47-24A6QA3"; };
+      };
+      folders = {
+	"Notas" = {
+	  path = "/home/${profile.user}/org";
+	  devices = [ "realme" ];
+	};
+      };
+    };
+  };
 }

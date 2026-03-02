@@ -44,6 +44,7 @@
           podman = true;
           virtualization = true;
           tor = true;
+	  syncthing = true;
         };
 
         gpu = {
