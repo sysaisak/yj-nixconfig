@@ -57,13 +57,12 @@
     ligolo-ng # Advanced tunneling and pivoting tool
 
     # --- Passwords & Cracking ---
-    #hashcat             # GPU-accelerated password cracking. DO NOT UNCOMMENT
-    john # John the Ripper (CPU password cracking)
-    hashid # Hash type identification tool
-    thc-hydra # Fast network login brute-forcer
-    seclists # Collection of wordlists and attack payloads
-    rockyou # Classic password wordlist
-    wordlists # Contains 2 scripts to get wordlist path. ej $(wordlists_path)/rockyou.txt
+    # hashcat             # GPU-accelerated (DO NOT UNCOMMENT in VM/laptop)
+    john                  # John the Ripper (CPU cracking)
+    hashid                # Hash type identification
+    thc-hydra             # Fast network login brute-forcer
+    # Wordlists package (the two scripts to see the path of the dicts): overridden to include SecLists and RockYou dicts.
+    # See: ./configs/wordlists.nix
 
     # --- Networking & Sniffing ---
     tshark # CLI network protocol analyzer (Wireshark terminal)
@@ -109,5 +108,6 @@
     virt-manager # qemu front end
     android-tools # adb and some others I guess
     strawberry # Music player. Can play local music and music from services
+    obs-studio # Screen recorder, webcam recorder, ETC.
   ];
 }
