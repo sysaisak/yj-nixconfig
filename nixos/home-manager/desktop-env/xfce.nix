@@ -20,7 +20,7 @@ lib.mkIf (profile.desktop == "xfce") {
 
     # GTK theme
     theme = {
-      name = "catppuccin-GTK-Dark";
+      name = "Catppuccin-GTK-Dark";
       package = pkgs.magnetic-catppuccin-gtk.override {
         tweaks = [
           "frappe"
@@ -37,8 +37,9 @@ lib.mkIf (profile.desktop == "xfce") {
       };
     };
 
-    gtk3.extraConfig.Settings = "gtk-application-prefer-dark-theme=1";
-    gtk4.extraConfig.Settings = "gtk-application-prefer-dark-theme=1";
+    gtk3.extraConfig.Settings = ''gtk-application-prefer-dark-themes=1'';
+    gtk4.extraConfig.Settings = ''gtk-application-prefer-dark-themes=1'';
+    
   };
 
   xfconf.settings = {

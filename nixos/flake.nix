@@ -44,7 +44,7 @@
           podman = true;
           virtualization = true;
           tor = true;
-	  syncthing = true;
+          syncthing = true;
         };
 
         gpu = {
@@ -72,12 +72,11 @@
           ./system/virtualization.nix
           ./hardware-configuration.nix
 
-          # Módulos de XLibre Overlay
+          # XLibre Overlay modules
           xlibre-overlay.nixosModules.overlay-xlibre-xserver
           xlibre-overlay.nixosModules.overlay-all-xlibre-drivers
 
-          # Descomenta la siguiente línea si tienes problemas gráficos con Nvidia Prime al iniciar
-          # to-me: No he testeado nvidia offload.
+          # to-me: Haven't tested nvidia offload yet.
           # xlibre-overlay.nixosModules.nvidia-ignore-ABI
 
           home-manager.nixosModules.home-manager

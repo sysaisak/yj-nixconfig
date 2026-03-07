@@ -109,5 +109,6 @@
     android-tools # adb and some others I guess
     strawberry # Music player. Can play local music and music from services
     obs-studio # Screen recorder, webcam recorder, ETC.
+    anki # Flashcards
   ];
 }

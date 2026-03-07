@@ -49,7 +49,11 @@
   services.tor = {
     enable = profile.services.tor;
     client.enable = true;
+    openFirewall = true;
   };
+
+  # Firewall
+  networking.firewall.enable = true;
 
   programs.wireshark = {
     enable = true;
